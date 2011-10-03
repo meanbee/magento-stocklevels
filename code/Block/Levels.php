@@ -31,7 +31,18 @@ class Meanbee_StockLevels_Block_Levels extends Mage_Catalog_Block_Product_View_A
      * @return int the maxiumum stock level attribute's value.
      */
     public function getMaximumStockLevel() {
-        return $this->_currentProduct->getData('maximum_stock_level');
+        $defaultLevel = trim(Mage::getStoreConfig('stocklevels/config/maximum_stock_level'));
+        $productLevel = trim($this->_currentProduct->getData('maximum_stock_level'));
+        
+        if ($productLevel == "") {
+            if ($defaultLevel == "") {
+                return (int) $this->_highestStockLevel;
+            } else {
+                return (int) $defaultLevel;
+            }
+        } else {
+            return (int) $productLevel;
+        }
     }
 
     /**

@@ -1,24 +1,17 @@
 <?php $labelValueMap = $this->getLabelValueMap(); ?>
-<?php $defaultMaximumStockLevel = trim(Mage::getStoreConfig('stocklevels/config/maximum_stock_level')); ?>
-<?php if (is_numeric($defaultMaximumStockLevel)): ?>
-    <div class="stocklevels-wrapper">
-        <?php $maximumStockLevel = $this->getMaximumStockLevel(); ?>
-        <?php $maximumStockLevel = (is_numeric($maximumStockLevel)) ? $maximumStockLevel : $defaultMaximumStockLevel; ?>
-        <dl>
-        <?php foreach ($labelValueMap as $label): ?>
-            <?php $fillPercent = $label['stock_level'] / $maximumStockLevel * 100 ?>
-            <?php $fillPercent = ($fillPercent > 100) ? 100 : $fillPercent; ?>
-                <dt><?php echo $this->getPrettyLabel($label['name']) ?></dt>
-                <dd>
-                    <?php if ($fillPercent == 0): ?>
-                        <p class="out-of-stock">Out of stock</p>
-                    <?php else: ?>
-                        <div class="stocklevel" style="width: <?php echo $fillPercent ?>%;"></div></dd>
-                    <?php endif ?>
-        <?php endforeach; ?>
-        </dl>
-    </div>
-<?php else: ?>
-    <p> Non-numeric option specified in Default Maximum Stock Level in admin area. </p>
-<?php endif ?>
-
+<div class="stocklevels-wrapper">
+    <?php $maximumStockLevel = $this->getMaximumStockLevel(); ?>
+    <dl>
+    <?php foreach ($labelValueMap as $label): ?>
+        <?php $fillPercent = $label['stock_level'] / $maximumStockLevel * 100 ?>
+        <?php $fillPercent = ($fillPercent > 100) ? 100 : $fillPercent; ?>
+            <dt><?php echo $this->getPrettyLabel($label['name']) ?></dt>
+            <dd>
+                <?php if ($fillPercent == 0): ?>
+                    <p class="out-of-stock">Out of stock</p>
+                <?php else: ?>
+                    <div class="stocklevel" style="width: <?php echo $fillPercent ?>%;"></div></dd>
+                <?php endif ?>
+    <?php endforeach; ?>
+    </dl>
+</div>
