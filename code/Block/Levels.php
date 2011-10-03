@@ -83,7 +83,7 @@ class Meanbee_StockLevels_Block_Levels extends Mage_Catalog_Block_Product_View_A
      */
     public function getLabelValueMap() {
         $labelValueMap = array();
-        $this->_getLabelValueMap($this->_option2ProductMap, '', $labelValueMap);
+        $this->_getLabelValueMap($this->_option2ProductMap, array(), $labelValueMap);
         return $labelValueMap;
     }
 
@@ -103,11 +103,11 @@ class Meanbee_StockLevels_Block_Levels extends Mage_Catalog_Block_Product_View_A
             // if the product is NULL we have no product matching this label, so add no entry.
             if ($option2ProductMap['product'] != NULL) {
                 // trim the whitespace at the start of the label
-                $labelValueMap[trim($label)] = $option2ProductMap['stockLevel'];
+                $labelValueMap[] = array('name' => $label, 'stock_level' => $option2ProductMap['stockLevel']);
             }
         } else {
             foreach(array_keys($option2ProductMap) as $key) {
-                $this->_getLabelValueMap($option2ProductMap[$key], $label . ' ' . $key, $labelValueMap);
+                $this->_getLabelValueMap($option2ProductMap[$key], array_merge($label, array($key)), $labelValueMap);
             }
             return $labelValueMap;
         }
@@ -143,5 +143,18 @@ class Meanbee_StockLevels_Block_Levels extends Mage_Catalog_Block_Product_View_A
             } 
         }
         return NULL;
+    }
+    
+    public function getPrettyLabel($array) {
+        if (count($array) == 1) {
+            $name = $array[0];
+        } else if (count($array) == 2) {
+            $name = join(' and ', $label['name']);
+        } else {
+            $count = count($array);
+            $name = join(', ', array_slice($array, 0, $count - 1)) . ' and ' . $array[$count-1];
+        }
+        
+        return $name;
     }
 }

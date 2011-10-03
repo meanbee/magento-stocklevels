@@ -5,10 +5,10 @@
         <?php $maximumStockLevel = $this->getMaximumStockLevel(); ?>
         <?php $maximumStockLevel = (is_numeric($maximumStockLevel)) ? $maximumStockLevel : $defaultMaximumStockLevel; ?>
         <dl>
-        <?php foreach (array_keys($labelValueMap) as $label): ?>
-            <?php $fillPercent = $labelValueMap[$label] / $maximumStockLevel * 100 ?>
+        <?php foreach ($labelValueMap as $label): ?>
+            <?php $fillPercent = $label['stock_level'] / $maximumStockLevel * 100 ?>
             <?php $fillPercent = ($fillPercent > 100) ? 100 : $fillPercent; ?>
-                <dt><?php echo $label?></dt>
+                <dt><?php echo $this->getPrettyLabel($label['name']) ?></dt>
                 <dd>
                     <?php if ($fillPercent == 0): ?>
                         <p class="out-of-stock">Out of stock</p>
