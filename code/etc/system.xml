@@ -16,7 +16,7 @@
 <config>
 	<sections>
 		<stocklevels translate="label" module="stocklevels">
-			<label>Visual Stock Levels</label>
+			<label>Meanbee: Visual Stock Levels</label>
 			<tab>catalog</tab>
 			<frontend_type>text</frontend_type>
 			<sort_order>2000</sort_order>
@@ -24,19 +24,10 @@
 			<show_in_website>1</show_in_website>
 			<show_in_store>1</show_in_store>
 			<groups>
-				<banner translate="label">
-					<label>Module Information</label>
-					<frontend_type>text</frontend_type>
-					<sort_order>10</sort_order>
-					<show_in_default>1</show_in_default>
-					<show_in_website>1</show_in_website>
-					<show_in_store>1</show_in_store>
-					<comment>Allow customers to see configurable product stock levels at a glace.</comment>
-				</banner>
                 <config translate="label">
                     <label>Configuration</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>30</sort_order>
+                    <sort_order>10</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
@@ -48,6 +39,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
+                            <comment><![CDATA[If no product level maximum stock level is defined, this value is used.  Leave blank to always ignore.]]></comment>
                         </maximum_stock_level> 
                     </fields>
                 </config>
