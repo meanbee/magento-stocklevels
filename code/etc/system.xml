@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Meanbee_OrderShare
+ *
+ * This module was developed by Meanbee Internet Solutions.  If you require any
+ * support or have any questions please contact us at support@meanbee.com.
+ *
+ * @category   Meanbee
+ * @package    Meanbee_OrderShare
+ * @author     Meanbee Internet Solutions <support@meanbee.com>
+ * @copyright  Copyright (c) 2010 Meanbee Internet Solutions (http://www.meanbee.com)
+ * @license    Single Site License, requiring consent from Meanbee Internet Solutions
+ */
+-->
+<config>
+	<sections>
+		<stocklevels translate="label" module="stocklevels">
+			<label>Visual Stock Levels</label>
+			<tab>catalog</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>2000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<banner translate="label">
+					<label>Module Information</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<comment>Allow customers to see configurable product stock levels at a glace.</comment>
+				</banner>
+                <config translate="label">
+                    <label>Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <maximum_stock_level translate="label">
+                            <label>Default Maximum Stock Level Value</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </maximum_stock_level> 
+                    </fields>
+                </config>
+			</groups>
+		</stocklevels>
+	</sections>
+</config>

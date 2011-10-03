@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<layout version="0.1.0">
+    <PRODUCT_TYPE_configurable translate="label" module="catalog">
+        <label>Catalog Product View (Configurable)</label>
+        <reference name="product.info">
+            <block type="catalog/product_view_type_configurable" name="product.info.configurable" as="product_type_data" template="meanbee/catalog_product_view_type_default.phtml">
+                <block type="stocklevels/levels" name="meanbee.stocklevels" template="meanbee/stocklevels/stocklevels.phtml"/>
+                <block type="core/text_list" name="product.info.configurable.extra" as="product_type_data_extra" translate="label">
+                    <label>Product Extra Info</label>
+                </block>
+            </block>
+        </reference>
+        <reference name="product.info.options.wrapper">
+            <block type="catalog/product_view_type_configurable" name="product.info.options.configurable" as="options_configurable" before="-" template="catalog/product/view/type/options/configurable.phtml"/>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+
+    <catalog_product_view>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/stocklevels.css</stylesheet></action>
+        </reference>
+    </catalog_product_view>
+</layout>

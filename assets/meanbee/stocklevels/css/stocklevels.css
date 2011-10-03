@@ -1,0 +1,24 @@
+div.stocklevels-wrapper {
+}
+
+div.stocklevel {
+    display: block;
+    /* css3 bg gradient box shadow curved border top right top left */
+    
+    height: 15px;
+
+    background: rgb(191,191,191); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(220,220,220,1) 0%, rgba(140,140,140,1) 140%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(220,220,220,1)), color-stop(140%,rgba(140,140,140,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(140,140,140,1) 140%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(140,140,140,1) 140%); /* Opera11.10+ */
+    background: -ms-linear-gradient(top, rgba(220,220,220,1) 0%,rgba(140,140,140,1) 140%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+    background: linear-gradient(top, rgba(220,220,220,1) 0%,rgba(140,140,140,1) 140%); /* W3C */
+}
+
+p.out-of-stock {
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+}

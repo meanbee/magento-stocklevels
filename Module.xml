@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Meanbee_StockLevels>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <!-- no dependencies -->
+            </depends>
+        </Meanbee_StockLevels>
+    </modules>
+</config>

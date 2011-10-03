@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Meanbee_StockLevels>
+            <version>0.1.0</version>
+        </Meanbee_StockLevels>
+    </modules>
+
+    <global>
+        <models>
+            <stocklevels>
+                <class>Meanbee_StockLevels_Model</class>
+            </stocklevels>
+        </models>
+
+        <blocks>
+            <stocklevels>
+                <class>Meanbee_StockLevels_Block</class>
+            </stocklevels>
+        </blocks>
+
+        <helpers>
+            <stocklevels>
+                <class>Meanbee_StockLevels_Helper</class>
+            </stocklevels>
+        </helpers>
+
+
+         <resources>
+            <stocklevels_setup>
+                <setup>
+                    <module>Meanbee_StockLevels</module>
+                    <class>Meanbee_StockLevels_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+     
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </stocklevels_setup>
+     
+            <stocklevels_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </stocklevels_write>
+            <stocklevels_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </stocklevels_read>
+        </resources>
+
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <stocklevels>
+                    <file>meanbee/stocklevels.xml</file>
+                </stocklevels>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml>
+            <acl>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <resources>
+                    <admin>
+                        <children>
+                            <system>
+                                <children>
+                                    <config>
+                                        <children>
+                                            <stocklevels translate="title" module="stocklevels">
+                                                <title>Order Share</title>
+                                            </stocklevels>
+                                        </children>
+                                    </config>
+                                </children>
+                            </system>
+                        </children>
+                    </admin>
+                </resources>
+            </acl>
+        </adminhtml>
+
+</config>

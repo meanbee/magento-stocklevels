@@ -1,0 +1,12 @@
+## Code
+code                            app/code/community/Meanbee/StockLevels
+
+## Design
+design/frontend/layout/*        app/design/frontend/base/default/layout/
+design/frontend/template/*     app/design/frontend/base/default/template/
+
+## Assets
+assets/*                        skin/frontend/base/default/
+
+## Misc
+Module.xml                      app/etc/modules/Meanbee_StockLevels.xml
