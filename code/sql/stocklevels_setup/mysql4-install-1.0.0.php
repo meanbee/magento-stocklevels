@@ -5,8 +5,8 @@ try {
 
     $installer->installEntities();
 
-    Mage::getSingleton('adminhtml/session')->addSuccess("Visual Stock Levels Installer Successful: 0.1.0.");
+    Mage::getSingleton('adminhtml/session')->addSuccess("Meanbee: Visual Stock Levels Installer Successful: 1.0.0.");
 } catch (Exception $e) {
-    Mage::getSingleton('adminhtml/session')->addError("An error has occurred installing Visual Stock Levels: ". $e->getMessage());
+    Mage::getSingleton('adminhtml/session')->addError("An error has occurred installing Meanbee: Visual Stock Levels: ". $e->getMessage());
 } 
 
