@@ -1,16 +1,19 @@
-Meanbee Inventory Run Rate Extension
+Meanbee Visual Stock Levels Extension
 =====================
-Getting a big picture of your inventory status can be difficult. The inbuilt Magento reporting doesn't help you predict when you are going to run out of stock.
 
-Calculate your current stock average run rate based off a configurable number of weeks.
+When your customers view your configurable product pages, the default "In Stock" label can be misleading. This label will still inform your customers that you have products in stock when in reality one or more of the associated products may be out of stock or low.
 
-Set your lead time on products and establish when you need to place your next supplier order.
+Meanbee Visual Stock Levels provides a flexible, and informative method of giving customers a clearer picture of your stock levels without revealing your business’ internal information.
 
-Generate reports at lightening speed with filterable columns for the information you want, fast.
+Our module seamlessly integrates with Magento's administration area and your default attribute set which allows your store to install and configure this feature with ease.
 
-Export your data for use in spreadsheet software.
+All you need to do is:
 
-With our Magento Run Rate extension your inventory status is displayed in a clear, unambiguous manner.
+- Install the module
+- Modify the module’s configuration
+- That’s it! Your configurable products will now display Meanbee’s Visual Stock Levels
+
+Another thing we should probably mention is that we're professional Magento Developers. We've built this module to the highest standards following best practices in Magento module development.
 
 ##### Compatibility
 Compatibility: 1.6, 1.7,  1.8, 1.9
